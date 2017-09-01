@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134C8D5C1F5A277C002C28CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C8D591F5A277C002C28CE /* Alamofire.framework */; };
+		134C8D5D1F5A277C002C28CE /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C8D5A1F5A277C002C28CE /* AlamofireImage.framework */; };
+		134C8D5E1F5A277C002C28CE /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C8D5B1F5A277C002C28CE /* Moya.framework */; };
+		134C8D611F5A28F6002C28CE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C8D601F5A28F6002C28CE /* Result.framework */; };
 		1391F3F81F5A171900CCE98C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1391F3F71F5A171900CCE98C /* AppDelegate.swift */; };
 		1391F3FA1F5A171900CCE98C /* CoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1391F3F91F5A171900CCE98C /* CoffeeTableViewController.swift */; };
 		1391F3FF1F5A171900CCE98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1391F3FE1F5A171900CCE98C /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		134C8D591F5A277C002C28CE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		134C8D5A1F5A277C002C28CE /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		134C8D5B1F5A277C002C28CE /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		134C8D601F5A28F6002C28CE /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		1391F3F41F5A171900CCE98C /* Percoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Percoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1391F3F71F5A171900CCE98C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1391F3F91F5A171900CCE98C /* CoffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134C8D611F5A28F6002C28CE /* Result.framework in Frameworks */,
+				134C8D5C1F5A277C002C28CE /* Alamofire.framework in Frameworks */,
+				134C8D5D1F5A277C002C28CE /* AlamofireImage.framework in Frameworks */,
+				134C8D5E1F5A277C002C28CE /* Moya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		134C8D581F5A277C002C28CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				134C8D601F5A28F6002C28CE /* Result.framework */,
+				134C8D591F5A277C002C28CE /* Alamofire.framework */,
+				134C8D5A1F5A277C002C28CE /* AlamofireImage.framework */,
+				134C8D5B1F5A277C002C28CE /* Moya.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1391F3EB1F5A171900CCE98C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +102,7 @@
 				1391F40B1F5A171A00CCE98C /* PercoffeeTests */,
 				1391F4161F5A171A00CCE98C /* PercoffeeUITests */,
 				1391F3F51F5A171900CCE98C /* Products */,
+				134C8D581F5A277C002C28CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +156,7 @@
 				1391F3F01F5A171900CCE98C /* Sources */,
 				1391F3F11F5A171900CCE98C /* Frameworks */,
 				1391F3F21F5A171900CCE98C /* Resources */,
+				134C8D5F1F5A27A4002C28CE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,6 +274,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		134C8D5F1F5A27A4002C28CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1391F3F01F5A171900CCE98C /* Sources */ = {
@@ -416,6 +465,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TGD6U52H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Percoffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vyazovoy.ios.Percoffee;
@@ -431,6 +484,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4TGD6U52H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Percoffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vyazovoy.ios.Percoffee;
