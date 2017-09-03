@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UINavigationBar.appearance().backIndicatorImage = #imageLiteral(resourceName: "BackIndicatorImage")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "BackIndicatorImage")
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.1725490196, green: 0.1725490196, blue: 0.1725490196, alpha: 1)
         window = UIWindow()
         window?.rootViewController = UINavigationController(rootViewController: CoffeeTableViewController())
         window?.makeKeyAndVisible()
