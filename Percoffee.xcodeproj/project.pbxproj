@@ -12,6 +12,7 @@
 		134C8D5D1F5A277C002C28CE /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C8D5A1F5A277C002C28CE /* AlamofireImage.framework */; };
 		134C8D5E1F5A277C002C28CE /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C8D5B1F5A277C002C28CE /* Moya.framework */; };
 		134C8D611F5A28F6002C28CE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134C8D601F5A28F6002C28CE /* Result.framework */; };
+		134C8D651F5A2B62002C28CE /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134C8D641F5A2B62002C28CE /* CoffeeTableViewCell.swift */; };
 		134C8D6C1F5A2F04002C28CE /* PercolateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134C8D6B1F5A2F04002C28CE /* PercolateService.swift */; };
 		1391F3F81F5A171900CCE98C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1391F3F71F5A171900CCE98C /* AppDelegate.swift */; };
 		1391F3FA1F5A171900CCE98C /* CoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1391F3F91F5A171900CCE98C /* CoffeeTableViewController.swift */; };
@@ -20,6 +21,8 @@
 		1391F40D1F5A171A00CCE98C /* PercoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1391F40C1F5A171A00CCE98C /* PercoffeeTests.swift */; };
 		1391F4181F5A171A00CCE98C /* PercoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1391F4171F5A171A00CCE98C /* PercoffeeUITests.swift */; };
 		13D58B671F5B49C90067ABA5 /* CoffeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D58B661F5B49C90067ABA5 /* CoffeeInfo.swift */; };
+		13D58B6A1F5B4A120067ABA5 /* CoffeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D58B691F5B4A120067ABA5 /* CoffeeDetailViewController.swift */; };
+		13D58B6D1F5C234F0067ABA5 /* CoffeeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D58B6B1F5C234F0067ABA5 /* CoffeeDetailTableViewCell.swift */; };
 		13D58B701F5C6FB30067ABA5 /* CoffeeDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D58B6F1F5C6FB30067ABA5 /* CoffeeDetailInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,7 @@
 		134C8D5A1F5A277C002C28CE /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		134C8D5B1F5A277C002C28CE /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		134C8D601F5A28F6002C28CE /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		134C8D641F5A2B62002C28CE /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
 		134C8D6B1F5A2F04002C28CE /* PercolateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercolateService.swift; sourceTree = "<group>"; };
 		1391F3F41F5A171900CCE98C /* Percoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Percoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1391F3F71F5A171900CCE98C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		1391F4171F5A171A00CCE98C /* PercoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercoffeeUITests.swift; sourceTree = "<group>"; };
 		1391F4191F5A171A00CCE98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13D58B661F5B49C90067ABA5 /* CoffeeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeInfo.swift; sourceTree = "<group>"; };
+		13D58B691F5B4A120067ABA5 /* CoffeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailViewController.swift; sourceTree = "<group>"; };
+		13D58B6B1F5C234F0067ABA5 /* CoffeeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		13D58B6F1F5C6FB30067ABA5 /* CoffeeDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +107,24 @@
 				134C8D5B1F5A277C002C28CE /* Moya.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		134C8D621F5A2AB6002C28CE /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				13D58B681F5B49ED0067ABA5 /* CoffeeDetail */,
+				134C8D631F5A2AE7002C28CE /* CoffeeList */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		134C8D631F5A2AE7002C28CE /* CoffeeList */ = {
+			isa = PBXGroup;
+			children = (
+				1391F3F91F5A171900CCE98C /* CoffeeTableViewController.swift */,
+				134C8D641F5A2B62002C28CE /* CoffeeTableViewCell.swift */,
+			);
+			path = CoffeeList;
 			sourceTree = "<group>";
 		};
 		134C8D681F5A2DE4002C28CE /* Model */ = {
@@ -147,8 +171,8 @@
 			children = (
 				134C8D6A1F5A2EE7002C28CE /* Services */,
 				134C8D681F5A2DE4002C28CE /* Model */,
+				134C8D621F5A2AB6002C28CE /* UserStories */,
 				1391F3F71F5A171900CCE98C /* AppDelegate.swift */,
-				1391F3F91F5A171900CCE98C /* CoffeeTableViewController.swift */,
 				1391F3FE1F5A171900CCE98C /* Assets.xcassets */,
 				1391F4001F5A171900CCE98C /* LaunchScreen.storyboard */,
 				1391F4031F5A171900CCE98C /* Info.plist */,
@@ -172,6 +196,15 @@
 				1391F4191F5A171A00CCE98C /* Info.plist */,
 			);
 			path = PercoffeeUITests;
+			sourceTree = "<group>";
+		};
+		13D58B681F5B49ED0067ABA5 /* CoffeeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				13D58B691F5B4A120067ABA5 /* CoffeeDetailViewController.swift */,
+				13D58B6B1F5C234F0067ABA5 /* CoffeeDetailTableViewCell.swift */,
+			);
+			path = CoffeeDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,11 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D58B6D1F5C234F0067ABA5 /* CoffeeDetailTableViewCell.swift in Sources */,
 				1302E3271F5CA013006182B6 /* PercolateProvider.swift in Sources */,
+				134C8D651F5A2B62002C28CE /* CoffeeTableViewCell.swift in Sources */,
 				134C8D6C1F5A2F04002C28CE /* PercolateService.swift in Sources */,
 				1391F3FA1F5A171900CCE98C /* CoffeeTableViewController.swift in Sources */,
 				13D58B701F5C6FB30067ABA5 /* CoffeeDetailInfo.swift in Sources */,
 				13D58B671F5B49C90067ABA5 /* CoffeeInfo.swift in Sources */,
+				13D58B6A1F5B4A120067ABA5 /* CoffeeDetailViewController.swift in Sources */,
 				1391F3F81F5A171900CCE98C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
