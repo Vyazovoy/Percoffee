@@ -90,7 +90,12 @@ class CoffeeTableViewController: UIViewController {
             case .success(let coffeeInfos):
                 self?.coffeeInfos = coffeeInfos
             case .failure(let error):
-                print(error)
+                let alertViewController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let retryAction = UIAlertAction(title: "Retry", style: .default) { (action) in
+                    self?.updateCoffeeInfos()
+                }
+                alertViewController.addAction(retryAction)
+                self?.present(alertViewController, animated: true, completion: nil)
             }
             self?.currentRequest = nil
             self?.tableView.refreshControl?.endRefreshing()
