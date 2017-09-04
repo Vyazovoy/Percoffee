@@ -29,6 +29,7 @@ final class CoffeeDetailViewController: UIViewController {
         let barButtonItem = UIBarButtonItem(title: "SHARE", style: .plain, target: nil, action: nil)
         barButtonItem.tintColor = #colorLiteral(red: 0.9450980392, green: 0.4, blue: 0.137254902, alpha: 1)
         barButtonItem.setTitleTextAttributes([.font : UIFont.boldSystemFont(ofSize: 12)], for: .normal)
+        barButtonItem.setTitleTextAttributes([.font : UIFont.boldSystemFont(ofSize: 12)], for: .highlighted)
         return barButtonItem
     }()
     
@@ -47,6 +48,7 @@ final class CoffeeDetailViewController: UIViewController {
         didSet {
             if isViewLoaded {
                 navigationItem.title = coffeeDetailInfo?.name ?? navigationItem.title
+                navigationItem.rightBarButtonItem = coffeeDetailInfo != nil ? shareButton : nil
                 tableView.reloadData()
             }
         }
@@ -65,7 +67,6 @@ final class CoffeeDetailViewController: UIViewController {
         
         shareButton.action = #selector(shareCoffee(sender:))
         shareButton.target = self
-        navigationItem.rightBarButtonItem = shareButton
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -115,7 +116,14 @@ final class CoffeeDetailViewController: UIViewController {
     }
     
     @objc private func shareCoffee(sender: UIBarButtonItem) {
-        print("SHARE")
+        let text = [coffeeDetailInfo?.name, coffeeDetailInfo?.info].flatMap({ $0 }).reduce("") { "\($0)\n\($1)" }
+        var items: [Any] = [text]
+        
+        if let imageURL = coffeeDetailInfo?.imageURL {
+            items.append(imageURL)
+        }
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
     
     @objc private func updateCoffee(sender: UIRefreshControl) {
